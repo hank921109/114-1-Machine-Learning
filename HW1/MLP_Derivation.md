@@ -3,11 +3,8 @@
 ## 1. Introduction
 多層感知機 (MLP) 是一種前饋神經網路 (Feedforward Neural Network)，具有至少一個隱藏層 (Hidden Layer)。本專案從零開始 (From Scratch) 實作了 MLP，並使用 **非線性雙半月形資料集 (Two Moons Dataset)** 進行驗證，展示神經網路處理複雜非線性邊界的能力。
 
-###  實作連結
-* **GitHub Notebook**: [MLP.ipynb](./MLP.ipynb)
-
 ### Network Architecture
-本專案使用的架構如下：
+使用的架構如下：
 * **Input Layer**: 2 Neurons ($x_1, x_2$)
 * **Hidden Layer**: 10 Neurons (Activation: Sigmoid) - *增加了神經元數量以擬合複雜邊界*
 * **Output Layer**: 1 Neuron (Activation: Sigmoid)
@@ -64,20 +61,26 @@ $$w_{new} = w_{old} + \eta \cdot (\delta \cdot \text{input}^T)$$
 
 ---
 
+### 實作連結
+* **GitHub Notebook**: [MLP.ipynb](./MLP.ipynb)
+
 ## 3. Implementation Steps & Results
 本程式碼分為四個步驟（詳見 ipynb），以下展示實作成果：
 
 **1. Data Generation**
 使用 `make_moons` 產生 200 筆互相交錯的非線性資料，並加入高斯雜訊 (Noise) 模擬真實情況。
-![Data Distribution](images/step1_data.png)
+<br>
+<img src="images/step1_data.png" width="600" alt="Data Distribution">
 
 **2. Model Construction**
 使用 NumPy 建立 MLP Class，手動實作 `forward` 與 `backward`。詳細程式碼邏輯請參閱 Notebook。
 
 **3. Training**
 執行 10,000 次 Epochs，並記錄 Loss 變化。可以看到 Loss 平滑下降，證明權重更新公式正確。
-![Loss Curve](images/step3_loss.png)
+<br>
+<img src="images/step3_loss.png" width="600" alt="Loss Curve">
 
 **4. Visualization**
 繪製 2D 分類決策邊界 (Decision Boundary)。模型成功切分了非線性的雙月形狀。
-![Decision Boundary](images/step4_result.png)
+<br>
+<img src="images/step4_result.png" width="600" alt="Decision Boundary">
