@@ -57,3 +57,7 @@ $$b^{\ast} = \frac{1}{|S|} \sum_{k \in S} (y_k - w^{\ast T} x_k)$$
 2.  **Finding Support Vectors**: 訓練模型並找出關鍵的支持向量。
 3.  **Verification**: **關鍵步驟**，手動撰寫程式驗證 $w^{\ast} = \sum \alpha_i y_i x_i$ 公式是否成立。
 4.  **Visualization**: 繪製超平面、邊界與決策區域。
+   
+###  實作連結 (GitHub)
+* **GitHub Notebook**: [SVM.ipynb](https://github.com/hank921109/114-1-Machine-Learning/blob/main/HW1/SVM.ipynb)
+* **主要功能**: 包含數據生成、支持向量標記、數學公式驗證及 2D 分類決策邊界視覺化。
